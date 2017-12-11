@@ -475,7 +475,7 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 
 Donations
 ---------
-Mine's:
+Mine:
  * BTC: 3L29JYDCKVxK6LNVCprKAL14yRukcEhQtV
  * XMR: 4Amfi5NFFdm5syc4dVMDM7bjoqxU1zePNikR7y9MoDTBDfY1FLCSmi5WbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm436kfec
  * ETH/ETC: 0x9DcF7f03d80CECFA9415141441e00FBC77dc1759
