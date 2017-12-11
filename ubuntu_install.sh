@@ -52,16 +52,32 @@ sudo mv ./pool /opt/pool
 cd /opt/pool
 npm update
 
-# Firewall Setup
-sudo ufw allow http
-sudo ufw allow https
-sudo ufw allow 3333
-sudo ufw allow 5555
-sudo ufw allow 7777
-sudo ufw allow 8888
+#Firewall setup
+read -p "Do you want to auto config firewall?(No if your using digital ocean) (y/n)?" choice
+case "$choice" in 
+  y|Y ) sudo ufw allow http;
+        sudo ufw allow https;
+        sudo ufw allow 3333;
+        sudo ufw allow 5555;
+        sudo ufw allow 7777;
+        sudo ufw allow 8888;;
+  n|N ) echo "no";;
+  * ) echo "invalid";;
+esac
 
-// The config file will need some configuring to work
-cp ~/config.json config.json
+# You will need to update the config in the fouture
+read -p "Do you want to use the example config? (y/n)?" choice
+case "$choice" in 
+  y|Y ) cp config_exmaple.json config.json;:
+  n|N ) echo "no";;
+  * ) echo "invalid";;
+esac
+read -p "Use coustom config(Please place config in your home folder) (y/n)?" choice
+case "$choice" in 
+  y|Y ) cp ~/config.json config.json;;
+  n|N ) echo "no";;
+  * ) echo "invalid";;
+esac
 
 sudo cp ./utils/redis.service /etc/systemd/system/redis.service
 sudo systemctl start redis
