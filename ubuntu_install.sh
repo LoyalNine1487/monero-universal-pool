@@ -47,7 +47,7 @@ sudo ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
 
 # Install Pool
 cd /tmp
-git clone https://github.com/CanadianRepublican/monero-universal-pool.git pool
+git clone -b DEV https://github.com/LoyalNine1487/monero-universal-pool.git pool
 sudo mv ./pool /opt/pool
 cd /opt/pool
 npm update
