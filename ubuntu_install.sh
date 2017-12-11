@@ -62,7 +62,7 @@ case "$choice" in
         sudo ufw allow 7777;
         sudo ufw allow 8888;;
   n|N ) echo "no";;
-  * ) echo "invalid";;
+  * ) echo "invalid, Please say y or n";;
 esac
 
 # You will need to update the config in the fouture
@@ -70,13 +70,13 @@ read -p "Do you want to use the example config? (y/n)?" choice
 case "$choice" in 
   y|Y ) cp config_exmaple.json config.json;:
   n|N ) echo "no";;
-  * ) echo "invalid";;
+  * ) echo "invalid, Please say y or n";;
 esac
 read -p "Use coustom config(Please place config in your home folder) (y/n)?" choice
 case "$choice" in 
   y|Y ) cp ~/config.json config.json;;
   n|N ) echo "no";;
-  * ) echo "invalid";;
+  * ) echo "invalid, Please say y or n";;
 esac
 
 sudo cp ./utils/redis.service /etc/systemd/system/redis.service
