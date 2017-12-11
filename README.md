@@ -112,7 +112,7 @@ Follow the Ubuntu 16.04 LTS install text file for quick setup. ( https://github.
 Clone the repository and run `npm update` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/CanadianRepublican/monero-universal-pool.git pool
+git clone https://github.com/LoyalNine1487/monero-universal-pool.git pool
 cd pool
 npm update
 ```
@@ -171,7 +171,7 @@ Explanation for each field:
     "clusterForks": "auto",
 
     /* Address where block rewards go, and miner payments come from. */
-    "poolAddress": "42VxjBpfi4TS6KFjNrrKo3QLcyK7gBGfM9w7DxmGRcocYnEbJ1hhZWXfaHJtCXBxnL74DpkioPSivjRYU8qkt59s3EaHUU3"
+    "poolAddress": "4Amfi5NFFdm5syc4dVMDM7bjoqxU1zePNikR7y9MoDTBDfY1FLCSmi5WbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm436kfec"
 
     /* Poll RPC daemons for new blocks every this many milliseconds. */
     "blockRefreshInterval": 1000,
@@ -183,17 +183,17 @@ Explanation for each field:
         {
             "port": 3333, //Port for mining apps to connect to
             "difficulty": 100, //Initial difficulty miners are set to
-            "desc": "Low end hardware" //Description of port
+            "desc": "Low end hardware/CPU mining" //Description of port
         },
         {
             "port": 5555,
             "difficulty": 2000,
-            "desc": "Mid range hardware"
+            "desc": "Mid range hardware(Most people)"
         },
         {
             "port": 7777,
             "difficulty": 10000,
-            "desc": "High end hardware"
+            "desc": "Really high end hardware/Nicehash"
         }
     ],
 
