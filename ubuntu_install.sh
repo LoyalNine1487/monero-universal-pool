@@ -68,7 +68,7 @@ esac
 # You will need to update the config in the fouture
 read -p "Do you want to use the example config? (y/n)?" choice
 case "$choice" in 
-  y|Y ) cp ./config_exmaple.json ./config.json;:
+  y|Y ) cp ./config_exmaple.json ./config.json;;
   n|N ) echo "no";;
   * ) echo "invalid, Please say y or n";;
 esac
