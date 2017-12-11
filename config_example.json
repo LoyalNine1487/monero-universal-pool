@@ -19,25 +19,25 @@
     "poolServer": {
         "enabled": true,
         "clusterForks": "auto",
-        "poolAddress": "44oWW9PV8vyauZjkmL7tGLSEnDdgGMVFw44xhxkLxyAUFJmACWthKJXe3M4SSEgxzpdMWs9MQZhx8UvzbPWC8yKgSbjPiSr",
-"addressBase58Prefix": 18,
+        "poolAddress": "4Amfi5NFFdm5syc4dVMDM7bjoqxU1zePNikR7y9MoDTBDfY1FLCSmi5WbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm436kfec",
+        "addressBase58Prefix": 18,
         "blockRefreshInterval": 1000,
         "minerTimeout": 900,
         "ports": [
             {
                 "port": 3333,
                 "difficulty": 100,
-                "desc": "Low end hardware"
+                "desc": "Low end hardware/CPU miner"
             },
             {
                 "port": 5555,
                 "difficulty": 2000,
-                "desc": "Mid range hardware"
+                "desc": "Mid range hardware(Most People)"
             },
             {
                 "port": 7777,
                 "difficulty": 10000,
-                "desc": "High end hardware"
+                "desc": "Really high end hardware"
             },
             {
                 "port": 8888,
@@ -104,18 +104,19 @@
     },
 
     "daemon": {
-        "host": "172.16.254.80",
+        "host": "127.0.0.1",
         "port": 18081
     },
 
     "wallet": {
-        "host": "172.16.254.80",
+        "host": "127.0.0.1",
         "port": 8082
     },
 
     "redis": {
         "host": "127.0.0.1",
-        "port": 6379
+        "port": 6379,
+        "auth": null
     },
 
     "monitoring": {
