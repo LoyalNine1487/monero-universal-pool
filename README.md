@@ -475,10 +475,17 @@ curl 127.0.0.1:18081/json_rpc -d '{"method":"getblockheaderbyheight","params":{"
 
 Donations
 ---------
+Mine's:
+ * BTC: 3L29JYDCKVxK6LNVCprKAL14yRukcEhQtV
+ * XMR: 4Amfi5NFFdm5syc4dVMDM7bjoqxU1zePNikR7y9MoDTBDfY1FLCSmi5WbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm436kfec
 
+CanaianRepublican's:
  * BTC: 1K4N5msYZHse6Hbxz4oWUjwqPf8wu6ducV
  * XMR: 42VxjBpfi4TS6KFjNrrKo3QLcyK7gBGfM9w7DxmGRcocYnEbJ1hhZWXfaHJtCXBxnL74DpkioPSivjRYU8qkt59s3EaHUU3
 
+zone1147x's:
+ * BTC: 1667jMt7NTZDaC8WXAxtMYBR8DPWCVoU4d
+ * XMR: 48Y4SoUJM5L3YXBEfNQ8bFNsvTNsqcH5Rgq8RF7BwpgvTBj2xr7CmWVanaw7L4U9MnZ4AG7U6Pn1pBhfQhFyFZ1rL1efL8z
 
 Credits
 -------
