@@ -1,10 +1,10 @@
-var api = "http://monero.hiive.biz:8117";
+var api = "[INSERT_YOUR_IP_HERE]";
 
-var poolHost = "monero.hiive.biz";
+var poolHost = "[INSERT_YOUR_IP_HERE]";
 
-var irc = "irc.freenode.net/#hiive";
+var irc = "[INSERT_YOUR_IRC_CHENNEL_HERE]";
 
-var email = "support@hiive.biz";
+var email = "[INSERT_YOUR_EMAIL_HERE]";
 
 var cryptonatorWidget = ["{symbol}-BTC", "{symbol}-CAD", "{symbol}-USD", "BTC-CAD", "BTC-USD"];
 
