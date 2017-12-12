@@ -1,5 +1,7 @@
 monero-cryptonote-pool
 ======================
+This code isn't being updated anymore, new repo: https://github.com/LoyalNine1487/cryptonote-universal-pool
+
 
 High performance Node.js (with native C addons) mining pool for CryptoNote based coins. ( Monero )
 I hacked this together from https://github.com/fancoder/cryptonote-universal-pool & https://github.com/zone117x/node-cryptonote-pool.  
