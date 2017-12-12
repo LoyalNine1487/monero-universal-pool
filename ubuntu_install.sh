@@ -14,8 +14,8 @@
 # System Updates and Pool Requirements
 yes | sudo apt -y --force-yes update
 yes | sudo apt -y --force-yes upgrade
-sudo apt install git libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake -y
-
+sudo apt install libssl-dev libboost-all-dev build-essential tcl curl gcc g++ cmake screen -y
+sudo apt install libtool autotools-dev autoconf pkg-config libssl-dev
 # Install Redis
 cd /tmp
 curl -O http://download.redis.io/redis-stable.tar.gz
@@ -44,6 +44,24 @@ tar xzvf node-v0.10.48-linux-x64.tar.gz
 sudo cp /tmp/node-v0.10.48-linux-x64/bin/node /usr/bin/
 sudo cp -R /tmp/node-v0.10.48-linux-x64/lib/* /usr/lib/
 sudo ln -s /usr/lib/node_modules/npm/bin/npm-cli.js /usr/bin/npm
+
+#Install Monerod
+read -p "Do you want to install monerod/monero cli tools (Do ctrl+a,d to close monerod)? (y/n)?" choice
+case "$choice" in 
+  y|Y ) sudo apt install libtool autotools-dev autoconf pkg-config libssl-dev;
+        sudo add-apt-repository ppa:bitcoin/bitcoin;
+        apt update; 
+        apt install libdb4.8-dev libdb4.8++-dev;
+        cd ~;
+        mkdir monero;
+        wget https://downloads.getmonero.org/cli/monero-linux-x64-v0.11.1.0.tar.bz2;
+        tar -xjvf monero-linux-x64-v0.11.0.0.tar.bz2;
+        cd monero-v0.11.0.0;
+        screen -dmS monero;
+        screen -S monero -X screen ./monerod;;
+  n|N ) echo "no";;
+  * ) echo "invalid, Please say y or n";;
+esac
 
 # Install Pool
 cd /tmp
@@ -84,4 +102,6 @@ sudo systemctl start redis
 sudo systemctl enable redis
 
 // run the pool
+screen -dmS pool
+screen -S monero -X screen node init.js
 node init.js
