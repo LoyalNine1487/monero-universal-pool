@@ -1,8 +1,8 @@
 monero-cryptonote-pool
 ======================
 
-High performance Node.js (with native C addons) mining pool for CryptoNote based coins. ( Monero )
-I hacked this together from https://github.com/fancoder/cryptonote-universal-pool & https://github.com/zone117x/node-cryptonote-pool.  
+High performance Node.js (with native C addons) mining pool for CryptoNote based coins. ( Monero optimized )
+Hacked together from https://github.com/fancoder/cryptonote-universal-pool & https://github.com/zone117x/node-cryptonote-pool.  
 
 
 
@@ -83,7 +83,7 @@ However both cryptonote-universal-pool & node-cryptonote-pool provide much of th
 
 #### Pools Using This Software
 
-* http://monero.hiive.biz
+* http://monero.hiive.biz (Closed)
 * http://monero.miningguild.org (Beta)
 
 Usage
@@ -92,30 +92,23 @@ Usage
 #### Requirements
 
 * Coin daemon(s) (find the coin's repo and build latest version from source)
-* [Node.js](http://nodejs.org/) v0.10+ ([follow these installation instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager))
-  * I used node-v0.10.48-linux-x64 on Ubuntu
+* [Node.js](http://nodejs.org/) v0.10.X(Node js 6+ doesn't work) ([follow these installation instructions](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager))
+  * I used node-v0.10.48-linux-x64 on Ubuntu 16.04
 * [Redis](http://redis.io/) key-value store v2.6+ ([follow these instructions](http://redis.io/topics/quickstart))
 * libssl required for the node-multi-hashing module
-  * For Ubuntu: `sudo apt-get install libssl-dev`
+  * For Ubuntu: `sudo apt install libssl-dev`
 
-If you use old versions of Node.js or Redis that may come with your system package manager then you will have problems. Follow the linked instructions to get the last stable versions.
+If you use old versions of Node.js or Redis that may come with your system package manager then you will have problems and scerity issues. Follow the linked instructions to get the last stable versions.
 
 
 [**Redis security warning**](http://redis.io/topics/security): be sure firewall access to redis - an easy way is to
 include `bind 127.0.0.1` in your `redis.conf` file. Also it's a good idea to learn about and understand software that
 you are using - a good place to start with redis is [data persistence](http://redis.io/topics/persistence).
 
-Follow the Ubuntu 16.04 LTS install text file for quick setup. ( https://github.com/CanadianRepublican/monero-universal-pool/blob/master/install_guide_ubuntu_16.04.txt )
+Follow the Ubuntu 16.04 LTS install text file for quick setup. ( https://github.com/LoyalNine1487/monero-universal-pool/blob/master/install_guide_ubuntu_16.04.sh ) Or run 
 
 #### 1) Downloading & Installing
-
-Clone the repository and run `npm update` for all the dependencies to be installed:
-
-```bash
-git clone https://github.com/LoyalNine1487/monero-universal-pool.git pool
-cd pool
-npm update
-```
+Follow the Ubuntu 16.04 LTS install text file for quick setup. ( https://github.com/LoyalNine1487/monero-universal-pool/blob/master/install_guide_ubuntu_16.04.sh ) Or run `git clone https://github.com/LoyalNine1487/monero-universal-pool.git && bash ./monero-universal-pool/ubuntu_install.sh`
 
 Systemd files have been added for the Monero Daemon, Monero Wallet, and Regis in the Utils folder.
 The Monero Daemon and Wallet service files will need to be customized for your own setup.
